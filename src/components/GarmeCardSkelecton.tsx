@@ -2,7 +2,7 @@ import { Card, CardBody, Skeleton, SkeletonText } from '@chakra-ui/react'
 
 const GarmeCardSkelecton = () => {
   return (
-    <Card width='350px'>
+    <Card >
         <Skeleton height='200px' />
 
         <CardBody>
