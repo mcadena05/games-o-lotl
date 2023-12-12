@@ -37,13 +37,15 @@ function App() {
         <GenreList selectedGenre={gameQuery.genre} onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre})}/>
       </GridItem></Show>
       <GridItem area='main'>
+      <Box paddingLeft={10}>
         <GameHeading gameQuery={gameQuery}></GameHeading>
-        <Flex paddingLeft={10} marginBottom={2}>
+        <Flex  marginBottom={2}>
           <Box marginRight={5}>
             <PlatformSelector selectedPlatform={gameQuery.platform} onSelectPlatform={(platform) => setGameQuery({...gameQuery, platform})}></PlatformSelector>
           </Box>
           <SortSelector sortOrder={gameQuery.sortOrder} onSelectSortOrder={(sortOrder) => setGameQuery({...gameQuery, sortOrder})}></SortSelector>
         </Flex>
+      </Box>
         <GameGrid gameQuery={gameQuery}/>
       </GridItem>
   </Grid>
